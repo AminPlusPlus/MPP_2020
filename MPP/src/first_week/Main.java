@@ -1,9 +1,8 @@
 package first_week;
 
+import java.util.ArrayList;
 
-
-
-
-public class Main {
-
+public abstract class Main {
+	class Object extends Main {}
 }
+
