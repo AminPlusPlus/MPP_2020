@@ -2,12 +2,12 @@ package w1_l5_1;
 
 public class DecoyDuck extends Duck {
 	public DecoyDuck() {
-		setQuackBehavior(new MuteQuack());
-		setFlyBehavior(new CannotFly());
+		setupQuackBehavior(new MuteQuack());
+		setupFlyBehavior(new CannotFly());
 	}
 	@Override
 	public void display() {
-		System.out.println("  displaying");
+		System.out.println("displaying");
 		
 	}
 }

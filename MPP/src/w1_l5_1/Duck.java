@@ -11,15 +11,15 @@ abstract public class Duck {
 	public void quack() {
 		quackBehavior.quack();
 	}
-	protected void setFlyBehavior(FlyBehavior b) {
+	protected void setupFlyBehavior(FlyBehavior b) {
 		flyBehavior = b;
 	}
-	protected void setQuackBehavior(QuackBehavior b) {
+	protected void setupQuackBehavior(QuackBehavior b) {
 		quackBehavior = b;
 	}
 	
 	public void swim() {
-		System.out.println("  swimming");
+		System.out.println("swimming");
 	}
 	
 }

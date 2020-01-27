@@ -14,7 +14,6 @@ public enum DuckType implements FlyBehavior,QuackBehavior {
 		public String quack() {
 			return "quacking";
 		}
-		
 	},
 
 	DECOY {
@@ -55,5 +54,7 @@ public enum DuckType implements FlyBehavior,QuackBehavior {
 		}
 		
 	}
+	
+	
 	
 }
