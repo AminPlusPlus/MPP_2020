@@ -14,6 +14,7 @@ public class Main {
             return ls;
         };
 
+        
         System.out.println(items.apply(2.0,3.0));
 
     }
