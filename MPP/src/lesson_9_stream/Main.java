@@ -4,8 +4,10 @@ import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
@@ -65,7 +67,7 @@ public class Main {
                 .limit(4)
                 .forEach(System.out::println);
 
-*/
+
         Item l1 = new Item("Chocolate", "Tasty");
 
         BiFunction<String,String,Item> biFunction = (n,p)-> new Item(n,p);
@@ -93,6 +95,14 @@ public class Main {
                 .collect(Collectors.toList());
 
         System.out.println();
+
+*/
+        Optional<String> string = Stream.of("I", "am", "Hello")
+                .reduce((x,y)->x+" "+y);
+
+
+        System.out.println(string.orElse("dsa"));
+
 
 
     }
