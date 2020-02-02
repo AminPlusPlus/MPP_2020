@@ -13,6 +13,7 @@ public class Main {
             ls.add(x*y);
             return ls;
         };
+
         System.out.println(items.apply(2.0,3.0));
 
     }
