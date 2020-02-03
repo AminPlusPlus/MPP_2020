@@ -4,6 +4,7 @@ public class Pair <T,S> {
     T x;
     S y;
 
+    T[] arr = (T[]) new Object[5];
 
     public Pair() {
     }

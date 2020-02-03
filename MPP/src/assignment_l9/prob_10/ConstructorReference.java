@@ -1,21 +1,21 @@
 package assignment_l9.prob_10;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Stream;
+
+
 
 class Human
 {
 	String name;
 	int age;
 	String gender;
-	
+
 	public Human(String name){
 		this.name = name;
 	}
+
 	public Human(String name,int age){
 		this.name = name;
 		this.age = age;
@@ -61,9 +61,21 @@ public static void main(String args[]){
 			.forEach(System.out::println);
 
 
-	
 
-    // Query 2 : Cretae an objecy by choosing suitable Interface to the specified constructors(Totally 3 constuctors)using fouth type of Method Reference ClassName::new. Then print the object status 
+    // Query 2 : Cretae an objecy by choosing suitable Interface to the specified constructors(Totally 3 constuctors)using
+	// fouth type of Method Reference ClassName::new. Then print the object status
+	Function<String, Human> fun = Human::new;
+	Human person = fun.apply("Person");
+	System.out.println(person);
+
+	BiFunction<String,Integer,Human> biFunction = Human::new;
+	Human personOne = biFunction.apply("Amin",20);
+	System.out.println(personOne);
+
+	TrioFunction<String,Integer,String,Human> trioFunction = Human::new;
+	Human person3 = trioFunction.apply("Amin",12,"Male");
+	System.out.println(person3);
+
 
 
 
@@ -73,7 +85,7 @@ public static void main(String args[]){
 			.count()
 	);
     
-    
+
     
    }
 

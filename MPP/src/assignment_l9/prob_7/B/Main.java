@@ -1,7 +1,9 @@
-package assignment_l9.prob_7.A;
+package assignment_l9.prob_7.B;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import assignment_l9.prob_7.A.Employee;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -17,12 +19,7 @@ public class Main {
                 new Employee("Alice", "Richards", 101000),
                 new Employee("Donald", "Trump", 100000));
 
-        System.out.println(list.stream()
-                .filter(s->s.getSalary()>100000)
-                .filter(s -> s.getLastName().charAt(0) > 'M')
-                .map(e -> e.getFirstName() + " "+e.getLastName())
-                .sorted()
-                .collect(Collectors.joining(",")));
+        System.out.println(LambdaLibrary.LibraryFunction.apply(list,10000,'M'));
 
     }
 

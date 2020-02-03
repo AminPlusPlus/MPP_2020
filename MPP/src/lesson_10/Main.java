@@ -1,8 +1,9 @@
 package lesson_10;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
+
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +16,36 @@ public class Main {
         System.out.println(resultCount(ars,3));
 
         //System.out.println(countOccurences(ars,3));
+
+        List<Integer> ints = new ArrayList<Integer>();
+        ints.add(1);
+        ints.add(2);
+        //List<Number> nums = ints;
+       // nums.add(3.14);
+        System.out.println(ints);
+
+        Integer[] integers= new Integer[5];
+
+        Number[] numbers = new Number[5];
+
+       Float[] floats = new Float[5];
+
+        List[] a = new List[50];
+
+        int[] aw = new int[5];
+
+       //2+3+2+3+2+3+5
+
+
+        System.out.println(resultCount(new Integer[]{1,2,3,4,1, null,null},1));
+
+
+        max(new String[] {"was","jack","jim","Amn","Amin"}).ifPresent(System.out::println);
+
+
+
+
+
     }
 
 
@@ -37,7 +68,17 @@ public class Main {
     //functional way
     public  static <T> int resultCount(T[] array, T target) {
         return (int) Stream.of(array)
-                .filter(target::equals)
+                .filter((target!= null) ? target::equals : Objects::isNull)
                 .count();
     }
+
+    public static  <T extends Comparable> Optional<T> max (T[]array) {
+        return  Stream.of(array)
+                .sorted().
+                        reduce((a,b) -> b);
+    }
+
+
 }
+
+
