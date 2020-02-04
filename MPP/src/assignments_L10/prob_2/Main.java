@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Main {
+    
     static <T>  T secondSmallest(List<T> list) {
         return  list.stream()
                 .sorted()
