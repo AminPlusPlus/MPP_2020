@@ -1,11 +1,11 @@
-package assignments_L10;
+package assignments_L10.prob_1;
 import java.util.*;
 
 public class GroupUtil {
 	//Fix this code
 	public static <T> Group<T> copy(Group<T> group) {
 		List<T> elements = group.getElements();
-		Group<T> grp = new Group<T>(group.getSpecialElement(), elements);
+		Group<T> grp = new Group<>(group.getSpecialElement(), elements);
 		return grp;
 	}
 	

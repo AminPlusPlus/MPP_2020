@@ -1,4 +1,4 @@
-package assignments_L10;
+package assignments_L10.prob_1;
 import java.util.*;
 public class Group<T> {
 	private T specialElement;
